@@ -123,27 +123,27 @@ MEDIA_URL = '/upload/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'upload')
 
 # DRF
-REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework.authentication.SessionAuthentication',
-        # 'rest_framework.authentication.TokenAuthentication',
-    ),
-    'DEFAULT_PERMISSION_CLASSES': (
-        'rest_framework.permissions.IsAuthenticatedOrReadOnly',
-    ),
-    'DEFAULT_PAGINATION_CLASS':  
-        'rest_framework.pagination.PageNumberPagination',
-        'PAGE_SIZE': 50,
+# REST_FRAMEWORK = {
+#     'DEFAULT_AUTHENTICATION_CLASSES': (
+#         'rest_framework.authentication.SessionAuthentication',
+#         # 'rest_framework.authentication.TokenAuthentication',
+#     ),
+#     'DEFAULT_PERMISSION_CLASSES': (
+#         'rest_framework.permissions.IsAuthenticatedOrReadOnly',
+#     ),
+#     'DEFAULT_PAGINATION_CLASS':  
+#         'rest_framework.pagination.PageNumberPagination',
+#         'PAGE_SIZE': 50,
 
-    'DEFAULT_THROTTLE_CLASSES': (
-        'rest_framework.throttling.AnonRateThrottle',
-        'rest_framework.throttling.UserRateThrottle',
-    ),
-    'DEFAULT_THROTTLE_RATES' :{
-        'anon': '100/minute',
-        'user': '100/minute'
-    }  
-}
+#     'DEFAULT_THROTTLE_CLASSES': (
+#         'rest_framework.throttling.AnonRateThrottle',
+#         'rest_framework.throttling.UserRateThrottle',
+#     ),
+#     'DEFAULT_THROTTLE_RATES' :{
+#         'anon': '100/minute',
+#         'user': '100/minute'
+#     }  
+# }
 
 
 MESSAGE_TAGS = {

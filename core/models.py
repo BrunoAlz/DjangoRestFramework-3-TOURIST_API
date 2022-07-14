@@ -13,12 +13,12 @@ class PontoTuristico(models.Model):
     atracoes = models.ManyToManyField(Atracao)
     comentarios = models.ManyToManyField(Comentario)
     avaliacoes = models.ManyToManyField(Avaliacao)
-    localizacao = models.ForeignKey(Localizacao, on_delete=models.CASCADE)
+    localizacao = models.ForeignKey(Localizacao, on_delete=models.CASCADE, null=True, blank=True)
 
     class Meta:
         verbose_name = ("Ponto Turistico")
         verbose_name_plural = ("Pontos Turisticos")
-        ordering = ('-id',)
+        ordering = ('id',)
 
     def __str__(self):
         return self.nome

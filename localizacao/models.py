@@ -14,6 +14,7 @@ class Localizacao(models.Model):
     class Meta:
         verbose_name = ("Localização")
         verbose_name_plural = ("Localizações")
+        ordering = ('id',)
 
     def __str__(self):
         return f'{self.endereco1} - {self.estado}'
