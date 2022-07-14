@@ -1,5 +1,8 @@
 from django.db import models
 from atracoes.models import Atracao
+from avaliacoes.models import Avaliacao
+from comentarios.models import Comentario
+from localizacao.models import Localizacao
 
 
 class PontoTuristico(models.Model):
@@ -8,6 +11,9 @@ class PontoTuristico(models.Model):
     descricao = models.TextField()
     aprovado = models.BooleanField(default=False)
     atracoes = models.ManyToManyField(Atracao)
+    comentarios = models.ManyToManyField(Comentario)
+    avaliacoes = models.ManyToManyField(Avaliacao)
+    localizacao = models.ForeignKey(Localizacao, on_delete=models.CASCADE)
 
     class Meta:
         verbose_name = ("Ponto Turistico")

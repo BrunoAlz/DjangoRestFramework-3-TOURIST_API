@@ -1,3 +1,6 @@
 from django.contrib import admin
 
-# Register your models here.
+from localizacao.models import Localizacao
+
+
+admin.site.register(Localizacao)
