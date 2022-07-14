@@ -18,6 +18,7 @@ class PontoTuristico(models.Model):
     class Meta:
         verbose_name = ("Ponto Turistico")
         verbose_name_plural = ("Pontos Turisticos")
+        ordering = ('-id',)
 
     def __str__(self):
         return self.nome
